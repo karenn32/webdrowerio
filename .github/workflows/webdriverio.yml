@@ -50,10 +50,6 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Generate Allure report
-        run: |
-          npm run allure:generate
-
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
@@ -68,9 +64,3 @@ jobs:
           PERSONAL_TOKEN: ${{secrets.WDIOTOKEN}}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
-
-      - name: Upload Allure results
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-report
-          path: allure-report
