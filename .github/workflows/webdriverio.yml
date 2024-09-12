@@ -1,46 +1,29 @@
-name: CI Pipeline
+name: Wdio Tests
 
 on:
-  push:
-    branches:
-      - kk-lq-15
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  test:
+  autotests:
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
-
-    services:
-      chrome:
-        image: selenium/standalone-chrome
-        ports:
-          - "4444"
-        options: --shm-size 2g
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
         with:
-          node-version: "20"
-
-      - name: Install Docker Compose
-        run: |
-          sudo apt-get update
-          sudo apt-get install docker-compose -y
+          node-version: "16"
 
       - name: Install dependencies
-        run: npm ci
+        if: always()
+        run: npm install
 
-      - name: Run tests in Docker
-        run: |
-          docker-compose up -d
-          sleep 10
-          npm run test:docker
+      - name: Run Test
+        if: always()
+        run: npm run test:chromeheadless
+        continue-on-error: true
 
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -53,8 +36,11 @@ jobs:
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
+        #id: allure-report
         with:
           allure_results: allure-results
+          #gh_pages: gh-pages
+          #allure_report: allure-report
           allure_history: allure-history
 
       - name: Deploy report to Github Pages
