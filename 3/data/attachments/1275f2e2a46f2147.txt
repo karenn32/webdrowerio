@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div[data-test=\"inventory-item-name\"]\"}\n  (Session info: chrome=128.0.6613.119)",
+  "stacktrace": "#0 0x55c68020686a <unknown>\n#1 0x55c67fed4e50 <unknown>\n#2 0x55c67ff24644 <unknown>\n#3 0x55c67ff24931 <unknown>\n#4 0x55c67ff6a534 <unknown>\n#5 0x55c67ff494bd <unknown>\n#6 0x55c67ff679c6 <unknown>\n#7 0x55c67ff49233 <unknown>\n#8 0x55c67ff17093 <unknown>\n#9 0x55c67ff1809e <unknown>\n#10 0x55c6801cdacb <unknown>\n#11 0x55c6801d1a81 <unknown>\n#12 0x55c6801b9695 <unknown>\n#13 0x55c6801d25f2 <unknown>\n#14 0x55c68019e86f <unknown>\n#15 0x55c6801f5668 <unknown>\n#16 0x55c6801f5832 <unknown>\n#17 0x55c68020565c <unknown>\n#18 0x7f3bd1094ac3 <unknown>\n"
+}
