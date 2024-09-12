@@ -2,6 +2,9 @@ import { config as baseConfig } from './wdio.conf.js'; // Импортируйт
 
 const config = {
     ...baseConfig,
+    specs: [
+        './test/specs/*.js'
+    ],
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
