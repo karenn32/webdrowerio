@@ -1,9 +1,6 @@
 name: CI Pipeline
 
 on:
-  push:
-    branches:
-      - kk-lq-15
   pull_request:
     branches:
       - main

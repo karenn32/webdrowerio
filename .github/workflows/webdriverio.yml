@@ -1,6 +1,8 @@
 name: Wdio Tests
 
 on:
+  push:
+    branches: [kk-lq-15]
   pull_request:
     branches: [main]
 
