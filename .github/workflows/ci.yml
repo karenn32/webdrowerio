@@ -28,6 +28,11 @@ jobs:
         with:
           node-version: "16"
 
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker-compose -y
+
       - name: Install dependencies
         run: npm ci
 
