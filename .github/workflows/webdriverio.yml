@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Test
         if: always()
-        run: npm test
+        run: npm run test:chromeheadless
         continue-on-error: true
 
       - name: Get Allure history

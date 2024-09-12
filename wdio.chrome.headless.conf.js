@@ -11,7 +11,8 @@ const config = {
                 '--disable-popup-blocking',
                 '--disable-infobars',
                 '--disable-search-engine-choice-screen',
-                '--headless'
+                '--headless',
+                '--window-size=1440,735'
             ]
         }
     }]
