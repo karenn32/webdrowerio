@@ -1,4 +1,4 @@
-export const config = {
+exports.config = {
     hostname: 'chrome',
     port: 4444,
     path: '/wd/hub',
@@ -285,4 +285,3 @@ export const config = {
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
-

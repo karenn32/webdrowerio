@@ -5,7 +5,7 @@ import { config } from '../../config.js';
 
 const { username, password } = config.valid_user;
 
-describe('Login valid user test', () => {
+describe('TC1 - Login valid user test', () => {
     it('should check that password is secured', async () => {
         await loginPage.open()
         await expect(loginPage.inputPassword).toHaveAttribute('type', 'password')

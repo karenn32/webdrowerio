@@ -1,0 +1,49 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - kk-lq-15
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      chrome:
+        image: selenium/standalone-chrome
+        ports:
+          - 4444:4444
+        options: --shm-size 2g
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests in Docker
+        run: |
+          docker-compose up -d
+          sleep 10 # время для запуска контейнеров
+          npm run test
+
+      - name: Generate Allure report
+        run: |
+          npm run allure:generate
+          npm run allure:open
+
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-results
+          path: allure-results

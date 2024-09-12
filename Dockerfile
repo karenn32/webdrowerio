@@ -1,20 +1,10 @@
+# specify the node base image with your desired version node:<version>
+FROM node:alpine
 
-FROM node:16
-
-
-WORKDIR /usr/src/app
-
-
-COPY package*.json ./
-
+# Copy over base directory
+COPY . ./
 
 RUN npm install
 
-
-COPY . .
-
-
-RUN npm install -g allure-commandline
-
-
-CMD ["npm", "test"]
+# queue up wdio run
+ENTRYPOINT ["npm", "test"]
