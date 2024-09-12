@@ -43,7 +43,7 @@ jobs:
           npm run allure:open
 
       - name: Upload Allure results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: allure-results
           path: allure-results
