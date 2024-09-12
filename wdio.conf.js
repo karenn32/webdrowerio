@@ -1,6 +1,6 @@
 export const config = {
     hostname: 'chrome',
-    port: 4448,
+    port: 4444,
     path: '/wd/hub',
     //
     // ====================
