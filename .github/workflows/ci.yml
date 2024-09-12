@@ -39,7 +39,7 @@ jobs:
       - name: Run tests in Docker
         run: |
           docker-compose up -d
-          sleep 10 # время для запуска контейнеров
+          sleep 10
           npm run test
 
       - name: Generate Allure report
