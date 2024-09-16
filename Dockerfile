@@ -7,4 +7,4 @@ COPY . ./
 RUN npm install
 
 # queue up wdio run
-ENTRYPOINT ["npm", "test:test"]
+ENTRYPOINT ["npm", "run", "test:test"]

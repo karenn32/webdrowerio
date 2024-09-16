@@ -1,4 +1,4 @@
-import { config as baseConfig } from './wdio.conf.js'; // Импортируйте общие конфигурации
+import { config as baseConfig } from './wdio.conf.js';
 
 const config = {
     ...baseConfig,
