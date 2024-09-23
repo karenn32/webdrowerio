@@ -71,11 +71,3 @@ npm run allure:open
 ```
 
 The reports are genereted automatically after any pull request to main branch. All generated reports are published on GitHub Pages and can be viewed at: [https://karenn32.github.io/webdrowerio](https://karenn32.github.io/webdrowerio).
-
-## About the Project
-
-This repository is created for automated testing of the [SauceDemo](https://www.saucedemo.com) website using WebdriverIO. The tests include checks for various site features, such as login, adding items to the cart, and order checkout.
-
-```
-
-```
