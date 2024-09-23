@@ -1,4 +1,3 @@
-```markdown
 # WebdriverIO Test Project
 
 This repository is intended for automated testing of the [SauceDemo](https://www.saucedemo.com) website using WebdriverIO. The project is set up to run tests on different browsers including Chrome and Firefox, as well as to work with Allure reports and Docker.
@@ -76,4 +75,7 @@ The reports are genereted automatically after any pull request to main branch. A
 ## About the Project
 
 This repository is created for automated testing of the [SauceDemo](https://www.saucedemo.com) website using WebdriverIO. The tests include checks for various site features, such as login, adding items to the cart, and order checkout.
+
+```
+
 ```
