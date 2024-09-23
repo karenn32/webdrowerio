@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+Dockerfile
+allure-report
+allure-results
+.dockerignore
+.git
+.gitignore
